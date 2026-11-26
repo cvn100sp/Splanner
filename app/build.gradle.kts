@@ -1,3 +1,4 @@
+
 import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 
 plugins {
@@ -13,18 +14,20 @@ dependencies {
 compose.desktop {
     application {
         mainClass = "MainKt"
+
         nativeDistributions {
             targetFormats(TargetFormat.Exe)
-            packageName = "WindowsButtonApp"
+
+            packageName = "Splanner"
             packageVersion = "1.0.0"
-            includeAllModules = true // Важно: вшивает JRE
+
+            // Включаем все модули Java Runtime
+            includeAllModules = true
 
             windows {
-                menuGroup = "WindowsButtonApp"
+                menuGroup = "Splanner"
                 shortcut = true
                 perUserInstall = true
-                // Добавляем флаг для создания единого файла
-                jpackageExtraArgs += listOf("--win-onefile")
             }
         }
     }
