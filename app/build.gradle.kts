@@ -14,14 +14,17 @@ compose.desktop {
     application {
         mainClass = "MainKt"
         nativeDistributions {
-            targetFormats(TargetFormat.Msi, TargetFormat.Exe)
+            targetFormats(TargetFormat.Exe)
             packageName = "WindowsButtonApp"
             packageVersion = "1.0.0"
+            includeAllModules = true // Важно: вшивает JRE
 
             windows {
                 menuGroup = "WindowsButtonApp"
                 shortcut = true
                 perUserInstall = true
+                // Добавляем флаг для создания единого файла
+                jpackageExtraArgs += listOf("--win-onefile")
             }
         }
     }
