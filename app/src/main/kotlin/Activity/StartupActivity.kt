@@ -42,7 +42,7 @@ import androidx.compose.ui.input.key.Key.Companion.R
 import androidx.compose.ui.modifier.ModifierLocalReadScope
 import androidx.compose.ui.modifier.modifierLocalOf
 import androidx.compose.ui.text.style.TextAlign
-import com.fuse.splanner.resources.Res
+import com.windows.resources.Res
 import com.windows.splanner.UX.setWallpaper
 import org.jetbrains.skia.Surface
 import java.lang.module.ModuleFinder
@@ -75,16 +75,20 @@ fun StartupActivity(){ // id=0
                 verticalArrangement = Arrangement.spacedBy(2.dp)
             ) {
                 UX.transparentButtonWithImage(
-                    "Экстренный вызов",
+                    "Emergency call",
                     Color.Black,
                     Icons.Default.Call,
-                    {}
+                    {
+                        TODO("")
+                    }
                 )
                 UX.transparentButtonWithImage(
-                    "Специальные возможности",
+                    "Vision Settings",
                     Color.Black,
                     Icons.Default.Visibility,
-                    {}
+                    {
+                        TODO("")
+                    }
                 )
             }
         }
@@ -100,7 +104,9 @@ fun StartupActivity(){ // id=0
                     "Настройки",
                     Color.Black,
                     Icons.Default.Settings,
-                    {}
+                    {
+                        TODO("")
+                    }
                 )
                 Button(
                     onClick = {

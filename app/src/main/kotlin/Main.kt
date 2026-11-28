@@ -8,7 +8,6 @@ import androidx.compose.ui.window.application
 import java.io.File
 
 val Sandboxed_storage = File(System.getProperty("user.home"), "Splanner")
-val userdata=File(Sandboxed_storage,"tasks.db")
 var currentActivity by mutableStateOf(0)
 
 fun main() = application {
@@ -24,4 +23,7 @@ fun main() = application {
             1 -> MainActivity()
         }
     }
+}
+fun addTaskAcctivity() {
+    showAddGoalDialog = true
 }

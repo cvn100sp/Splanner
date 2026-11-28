@@ -14,7 +14,7 @@ dependencies {
     implementation(compose.components.resources)
     implementation(compose.materialIconsExtended)
     implementation(compose.material3)
-    implementation("org.xerial:sqlite-jdbc:3.51.1.0")
+    implementation(compose.animation)
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.9.0")
 }
 
@@ -42,6 +42,6 @@ compose.desktop {
 
 compose.resources {
     publicResClass = true
-    packageOfResClass = "com.fuse.splanner.resources"
+    packageOfResClass = "com.windows.resources"
     generateResClass = always
 }
